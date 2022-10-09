@@ -9,7 +9,7 @@ const Survices = () => {
         fetch("services.json")
             .then(res => res.json())
             .then(data => setCardData(data))
-    },[])
+    }, []);
 
     return (
         <div className='container'>

@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
 
-const Cart = ({carts}) => {
-    const {id, name, img, description, price} = carts;
+const Cart = ({ carts }) => {
+
+    const { id, name, img, description, price } = carts;
+    const onGetUserData = id => {
+        console.log({id});
+    }
+
     return (
         <>
             <div className='col-lg-3 col-md-6 col-12 col mx-1 my-4 border border-info border-2 p-3 rounded'>
@@ -17,9 +22,9 @@ const Cart = ({carts}) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <small className="text-muted">Last updated 3 mins ago <h5><mark>{id}</mark></h5></small>
                 </Card.Footer>
-                <button>click me</button>
+                <Button variant="info" onClick={() => onGetUserData(id)}>Click Me</Button>
             </div>
         </>
     );
