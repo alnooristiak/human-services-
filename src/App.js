@@ -5,7 +5,7 @@ import Home from './Pages/Home/Home';
 import ServiceDetail from './Pages/Home/ServiceDetail/ServiceDetail';
 import Survices from './Pages/Home/Survices';
 import Login from './Pages/Login/Login';
-import Logout from './Pages/Logout/Logout';
+import Register from './Pages/Register/Register';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -20,7 +20,7 @@ function App() {
         <Route path='/survices/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path='/survices' element={<Survices></Survices>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/logout' element={<Logout></Logout>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
