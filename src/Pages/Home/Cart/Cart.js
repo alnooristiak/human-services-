@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ carts }) => {
 
     const { id, name, img, description, price } = carts;
+    const navigate = useNavigate();
     const onGetUserData = id => {
-        console.log({id});
+        // console.log({id});
+        navigate(`survices/${id}`);
     }
 
     return (
